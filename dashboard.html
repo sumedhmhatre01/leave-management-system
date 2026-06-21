@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Dashboard</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <!-- Components CSS -->
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Leave Management System</h1>
+
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+      <section class="welcome-card">
+        <h2 id="welcomeMessage"></h2>
+        <p>Manage your leave requests easily.</p>
+      </section>
+
+      <section class="form-card">
+        <h3>Apply Leave</h3>
+
+        <form id="leaveForm">
+          <label>Leave Type</label>
+
+          <select id="leaveType" required>
+            <option value="">Select Leave Type</option>
+            <option value="Casual">Casual</option>
+            <option value="Sick">Sick</option>
+            <option value="Annual">Annual</option>
+            <option value="WFH">Work From Home</option>
+          </select>
+
+          <label>Start Date</label>
+
+          <input type="date" id="startDate" required />
+
+          <label>End Date</label>
+
+          <input type="date" id="endDate" required />
+
+          <label>Reason</label>
+
+          <textarea
+            id="reason"
+            rows="4"
+            placeholder="Enter reason..."
+          ></textarea>
+
+          <button type="submit">Apply Leave</button>
+        </form>
+      </section>
+
+      <section class="history-card">
+        <h3>My Leave Requests</h3>
+
+        <div id="leaveList"></div>
+      </section>
+    </main>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Config -->
+    <script src="config.js"></script>
+
+    <!-- Supabase Client -->
+    <script src="js/supabase.js"></script>
+
+    <!-- UI Components -->
+    <script src="js/ui.js"></script>
+
+    <!-- Dashboard Logic -->
+    <script src="js/dashboard.js"></script>
+
+    <!-- Leave Logic -->
+    <script src="js/leave.js"></script>
+  </body>
+</html>

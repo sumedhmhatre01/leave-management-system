@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="css/admin.css" />
+
+    <!-- Components CSS -->
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <main>
+      <section class="welcome-card">
+        <h2 id="adminName"></h2>
+        <p>Manage employee leave requests.</p>
+      </section>
+
+      <section class="filter-card">
+        <h3>Search & Filters</h3>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by employee email"
+        />
+
+        <button id="searchBtn">Search</button>
+
+        <br /><br />
+
+        <select id="statusFilter">
+          <option value="">All Status</option>
+          <option value="pending">Pending</option>
+          <option value="approved">Approved</option>
+          <option value="rejected">Rejected</option>
+        </select>
+
+        <br /><br />
+
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="Casual">Casual</option>
+          <option value="Sick">Sick</option>
+          <option value="Annual">Annual</option>
+          <option value="WFH">WFH</option>
+        </select>
+      </section>
+
+      <section class="leave-card-container">
+        <h3>All Leave Requests</h3>
+
+        <div id="leaveContainer"></div>
+      </section>
+    </main>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Config -->
+    <script src="config.js"></script>
+
+    <!-- Supabase Client -->
+    <script src="js/supabase.js"></script>
+
+    <!-- UI Components -->
+    <script src="js/ui.js"></script>
+
+    <!-- Admin Logic -->
+    <script src="js/admin.js"></script>
+  </body>
+</html>

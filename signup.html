@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - Leave Management System</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/auth.css" />
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <h2>Create Account</h2>
+
+      <input type="text" id="name" placeholder="Enter Full Name" />
+
+      <input type="email" id="email" placeholder="Enter Email" />
+
+      <input type="password" id="password" placeholder="Enter Password" />
+
+      <button id="signupBtn">Create Account</button>
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Config -->
+    <script src="config.js"></script>
+
+    <!-- Supabase Client -->
+    <script src="js/supabase.js"></script>
+
+    <!-- Auth Logic -->
+    <script src="js/auth.js"></script>
+  </body>
+</html>
